@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL FOR YOU Service IA - Votre Partenaire Digital</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0A0A0A',
+                        darkCard: '#121212',
+                        darkBorder: '#2A2A2A',
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#F3E5AB',
+                            dark: '#B8860B',
+                            glow: 'rgba(212, 175, 55, 0.25)'
+                        },
+                        offWhite: '#F5F5F7'
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        sans: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0A0A0A;
+            color: #F5F5F7;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF0B0 0%, #D4AF37 50%, #996515 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-border {
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .gold-border-glow {
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+        }
+
+        .gold-button {
+            background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+            color: #000;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .gold-button:hover {
+            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 100%);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .custom-card {
+            background: linear-gradient(180deg, rgba(20, 20, 20, 0.9) 0%, rgba(10, 10, 10, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .custom-card:hover {
+            border-color: rgba(212, 175, 55, 0.6);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.2);
+        }
+
+        /* Glassmorphism overlays */
+        .glass-panel {
+            background: rgba(18, 18, 18, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold selection:text-black">
+
+    <!-- BARRE DE NAVIGATION -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-panel py-4 px-4 md:px-8 border-b border-gold/20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- LOGO -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full border border-gold flex items-center justify-center bg-black/50 group-hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] transition">
+                    <span class="font-cinzel text-gold font-bold text-lg">AFY</span>
+                </div>
+                <div>
+                    <span class="font-cinzel text-gold tracking-widest font-extrabold text-sm sm:text-base block uppercase">ALL FOR YOU</span>
+                    <span class="text-[9px] tracking-widest text-gray-400 uppercase block -mt-1">Service IA • Bénin</span>
+                </div>
+            </a>
+
+            <!-- MENU NAVIGATION (Desktop) -->
+            <div class="hidden lg:flex items-center space-x-8 text-xs font-medium tracking-wider uppercase">
+                <a href="#about" class="text-gray-300 hover:text-gold transition">Qui Sommes-Nous</a>
+                <a href="#services" class="text-gray-300 hover:text-gold transition">Services</a>
+                <a href="#packs" class="text-gray-300 hover:text-gold transition">Packs & Tarifs</a>
+                <a href="#realisations" class="text-gray-300 hover:text-gold transition">Réalisations</a>
+                <a href="#methode" class="text-gray-300 hover:text-gold transition">Méthode</a>
+            </div>
+
+            <!-- ACTION BUTTON -->
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/2290168926564?text=Bonjour%20ALL%20FOR%20YOU%20Service%20IA,%20je%20souhaite%20obtenir%20des%20informations%20sur%20vos%20services." 
+                   target="_blank" 
+                   class="gold-button px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>Contact Direct</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION HERO / EN-TÊTE -->
+    <header class="relative pt-32 pb-20 md:pt-44 md:pb-32 px-4 overflow-hidden border-b border-gold/10">
+        <!-- Fond décoratif avec lueur dorée -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <!-- Badge Badge IA -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/40 bg-gold/10 text-gold text-xs uppercase tracking-widest mb-6 animate-pulse">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <span>L'IA Au Service De Votre Croissance</span>
+            </div>
+
+            <h1 class="font-cinzel text-3xl sm:text-5xl md:text-6xl font-extrabold uppercase tracking-wide leading-tight mb-6">
+                Votre Partenaire Digital <br>
+                <span class="gold-gradient-text">Haut De Gamme Au Bénin</span>
+            </h1>
+
+            <p class="text-gray-300 text-sm sm:text-base md:text-lg max-w-3xl mx-auto mb-10 leading-relaxed">
+                Création de sites web professionnels, modernes et ultra-performants pour PME, restaurants, hôtels et commerces à Cotonou et partout dans le monde.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
+                <a href="#packs" class="gold-button w-full sm:w-auto px-8 py-4 rounded-lg uppercase tracking-wider font-bold text-sm">
+                    Découvrir Nos Offres
+                </a>
+                <a href="#realisations" class="w-full sm:w-auto px-8 py-4 rounded-lg gold-border hover:bg-gold/10 text-gold uppercase tracking-wider font-semibold text-sm transition">
+                    Voir Nos Réalisations
+                </a>
+            </div>
+
+            <!-- Coordonnées Rapides Header -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-8 border-t border-gold/15 max-w-4xl mx-auto text-xs text-gray-300">
+                <div class="flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-location-dot text-gold"></i>
+                    <span>Godomey - Cotonou - Bénin</span>
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone text-gold"></i>
+                    <span>+229 01 62 23 24 87 / 01 68 92 65 64</span>
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-envelope text-gold"></i>
+                    <span>ikejikadja@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION QUI SOMMES-NOUS ? -->
+    <section id="about" class="py-20 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-gold text-xs uppercase tracking-widest font-semibold block mb-2">Présentation</span>
+            <h2 class="font-cinzel text-2xl sm:text-4xl font-extrabold gold-gradient-text uppercase">Qui Sommes-Nous ?</h2>
+            <div class="w-16 h-0.5 bg-gold mx-auto mt-4"></div>
+            <p class="text-gray-300 max-w-3xl mx-auto mt-6 text-sm sm:text-base leading-relaxed">
+                <strong class="text-gold font-semibold">ALL FOR YOU Service IA</strong> accompagne les entreprises dans leur expansion numérique grâce à des solutions web modernes, élégantes et parfaitement adaptées au marché local et international.
+            </p>
+        </div>
+
+        <!-- 5 Objectifs clés -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <!-- Objectif 1 -->
+            <div class="custom-card p-6 rounded-xl gold-border text-center flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-gold/10 border border-gold/40 flex items-center justify-center text-gold mb-4 text-xl">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h3 class="font-cinzel text-sm font-bold text-gold uppercase mb-2">Attirer Plus De Clients</h3>
+                <p class="text-xs text-gray-400">Convertissez vos visiteurs en clients fidèles grâce à des parcours optimisés.</p>
+            </div>
+
+            <!-- Objectif 2 -->
+            <div class="custom-card p-6 rounded-xl gold-border text-center flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-gold/10 border border-gold/40 flex items-center justify-center text-gold mb-4 text-xl">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+                <h3 class="font-cinzel text-sm font-bold text-gold uppercase mb-2">Image Professionnelle</h3>
+                <p class="text-xs text-gray-400">Affirmez votre crédibilité avec un design haut de gamme noir et or sur-mesure.</p>
+            </div>
+
+            <!-- Objectif 3 -->
+            <div class="custom-card p-6 rounded-xl gold-border text-center flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-gold/10 border border-gold/40 flex items-center justify-center text-gold mb-4 text-xl">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <h3 class="font-cinzel text-sm font-bold text-gold uppercase mb-2">Faciliter La Réservation</h3>
+                <p class="text-xs text-gray-400">Recevez vos demandes de réservation directement sur votre WhatsApp Business.</p>
+            </div>
+
+            <!-- Objectif 4 -->
+            <div class="custom-card p-6 rounded-xl gold-border text-center flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-gold/10 border border-gold/40 flex items-center justify-center text-gold mb-4 text-xl">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <h3 class="font-cinzel text-sm font-bold text-gold uppercase mb-2">Visibilité Maximale</h3>
+                <p class="text-xs text-gray-400">Soyez facilement repérable sur Google Search et Google Maps à Cotonou.</p>
+            </div>
+
+            <!-- Objectif 5 -->
+            <div class="custom-card p-6 rounded-xl gold-border text-center flex flex-col items-center sm:col-span-2 lg:col-span-1">
+                <div class="w-12 h-12 rounded-full bg-gold/10 border border-gold/40 flex items-center justify-center text-gold mb-4 text-xl">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+                <h3 class="font-cinzel text-sm font-bold text-gold uppercase mb-2">Digitalisation IA</h3>
+                <p class="text-xs text-gray-400">Automatisez vos interactions grâce aux technologies intelligentes actuelles.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION NOS SERVICES -->
+    <section id="services" class="py-20 px-4 bg-darkCard/50 border-y border-gold/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-gold text-xs uppercase tracking-widest font-semibold block mb-2">Expertise Sectorielle</span>
+                <h2 class="font-cinzel text-2xl sm:text-4xl font-extrabold gold-gradient-text uppercase">Nos Services Dédiés</h2>
+                <div class="w-16 h-0.5 bg-gold mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- RESTAURANTS -->
+                <div class="custom-card p-8 rounded-xl gold-border relative overflow-hidden group">
+                    <div class="text-gold text-3xl mb-6"><i class="fa-solid fa-utensils"></i></div>
+                    <h3 class="font-cinzel text-xl font-bold text-gold uppercase mb-4 border-b border-gold/20 pb-3">Restaurants</h3>
+                    <ul class="space-y-3 text-xs text-gray-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Menus interactifs en ligne</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Réservation directe WhatsApp</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Galerie photos gastronomique</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Localisation Google Maps</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Présentation des spécialités</li>
+                    </ul>
+                </div>
+
+                <!-- PME -->
+                <div class="custom-card p-8 rounded-xl gold-border relative overflow-hidden group">
+                    <div class="text-gold text-3xl mb-6"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3 class="font-cinzel text-xl font-bold text-gold uppercase mb-4 border-b border-gold/20 pb-3">PME & Entreprises</h3>
+                    <ul class="space-y-3 text-xs text-gray-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Présentation institutionnelle</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Vitrine claire des prestations</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Formulaire de demande de devis</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Témoignages & références</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Formulaire de contact direct</li>
+                    </ul>
+                </div>
+
+                <!-- HÔTELS -->
+                <div class="custom-card p-8 rounded-xl gold-border relative overflow-hidden group">
+                    <div class="text-gold text-3xl mb-6"><i class="fa-solid fa-hotel"></i></div>
+                    <h3 class="font-cinzel text-xl font-bold text-gold uppercase mb-4 border-b border-gold/20 pb-3">Hôtels & Séjours</h3>
+                    <ul class="space-y-3 text-xs text-gray-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Présentation des suites/chambres</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Galerie photos haute définition</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Module de réservation simple</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Bouton d'appel & contact rapide</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Géolocalisation interactive</li>
+                    </ul>
+                </div>
+
+                <!-- COMMERCES -->
+                <div class="custom-card p-8 rounded-xl gold-border relative overflow-hidden group">
+                    <div class="text-gold text-3xl mb-6"><i class="fa-solid fa-store"></i></div>
+                    <h3 class="font-cinzel text-xl font-bold text-gold uppercase mb-4 border-b border-gold/20 pb-3">Commerces & Shops</h3>
+                    <ul class="space-y-3 text-xs text-gray-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Catalogue de produits visuel</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Affichage clair des prix</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Intégration WhatsApp Business</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Liens réseaux sociaux (FB, Insta)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Informations de passage/boutique</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION NOS PACKS -->
+    <section id="packs" class="py-20 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-gold text-xs uppercase tracking-widest font-semibold block mb-2">Tarification Transparente</span>
+            <h2 class="font-cinzel text-2xl sm:text-4xl font-extrabold gold-gradient-text uppercase">Nos Packs Créatifs</h2>
+            <div class="w-16 h-0.5 bg-gold mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+            <!-- PACK STARTER -->
+            <div class="custom-card p-8 rounded-2xl gold-border flex flex-col justify-between">
+                <div>
+                    <div class="text-center mb-6">
+                        <span class="text-xs uppercase tracking-widest text-gray-400 font-semibold block">Pour Démarrer</span>
+                        <h3 class="font-cinzel text-2xl font-bold text-gold uppercase mt-1">Pack Starter</h3>
+                        <div class="mt-4 text-3xl font-extrabold text-white">
+                            150 000 <span class="text-sm font-normal text-gold">FCFA</span>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-4 text-xs text-gray-300 mb-8 border-t border-gold/15 pt-6">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-gold text-sm"></i> Site web professionnel unique</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-gold text-sm"></i> Design 100% Mobile & Responsive</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-gold text-sm"></i> Intégration WhatsApp direct</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-gold text-sm"></i> Carte Google Maps interactive</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-gold text-sm"></i> Formulaire de contact rapide</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-gold text-sm"></i> Livraison rapide garantie</li>
+                    </ul>
+                </div>
+
+                <a href="https://wa.me/2290168926564?text=Bonjour,%20je%20souhaite%20commander%20le%20Pack%20Starter%20(150.000%20FCFA)" 
+                   class="w-full py-3 px-4 rounded-lg gold-border text-center text-xs uppercase tracking-wider font-bold text-gold hover:bg-gold hover:text-black transition">
+                    Commander Ce Pack
+                </a>
+            </div>
+
+            <!-- PACK BUSINESS (POPULAIRE) -->
+            <div class="custom-card p-8 rounded-2xl gold-border-glow relative flex flex-col justify-between bg-gold/5 scale-105 z-10">
+                <!-- Badge Populaire -->
+                <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gold text-black font-extrabold text-[10px] tracking-widest uppercase px-4 py-1 rounded-full shadow-lg">
+                    ★ Le Plus Populaire ★
+                </div>
+
+                <div>
+                    <div class="text-center mb-6 pt-2">
+                        <span class="text-xs uppercase tracking-widest text-gold font-semibold block">Développement Complet</span>
+                        <h3 class="font-cinzel text-2xl font-bold text-gold uppercase mt-1">Pack Business</h3>
+                        <div class="mt-4 text-4xl font-extrabold gold-gradient-text">
+                            250 000 <span class="text-sm font-normal text-gold">FCFA</span>
+                        </div>
+                    </div>
+
+                    <p class="text-[11px] text-gold/80 text-center mb-4 italic">Tout le contenu du Pack Starter, avec en plus :</p>
+
+                    <ul class="space-y-4 text-xs text-gray-200 mb-8 border-t border-gold/20 pt-6">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-gold text-sm"></i> Jusqu'à 5 pages personnalisées</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-gold text-sm"></i> Galerie photos HD dynamique</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-gold text-sm"></i> Section Témoignages & Avis clients</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-gold text-sm"></i> Liaison réseaux sociaux complète</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-gold text-sm"></i> Référencement naturel Google (SEO de base)</li>
+                    </ul>
+                </div>
+
+                <a href="https://wa.me/2290168926564?text=Bonjour,%20je%20souhaite%20commander%20le%20Pack%20Business%20(250.000%20FCFA)" 
+                   class="gold-button w-full py-4 rounded-lg text-center text-xs uppercase tracking-wider font-extrabold shadow-lg">
+                    Commander Ce Pack
+                </a>
+            </div>
+
+            <!-- PACK PREMIUM -->
+            <div class="custom-card p-8 rounded-2xl gold-border flex flex-col justify-between">
+                <div>
+                    <div class="text-center mb-6">
+                        <span class="text-xs uppercase tracking-widest text-gray-400 font-semibold block">Solution Prestigieuse</span>
+                        <h3 class="font-cinzel text-2xl font-bold text-gold uppercase mt-1">Pack Premium</h3>
+                        <div class="mt-4 text-3xl font-extrabold text-white">
+                            450 000 <span class="text-sm font-normal text-gold">FCFA</span>
+                        </div>
+                    </div>
+
+                    <p class="text-[11px] text-gray-400 text-center mb-4 italic">Tout le contenu du Pack Business, avec en plus :</p>
+
+                    <ul class="space-y-4 text-xs text-gray-300 mb-8 border-t border-gold/15 pt-6">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-star text-gold text-sm"></i> Design sur-mesure Luxe (Noir & Or)</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-star text-gold text-sm"></i> Module de réservation en ligne avancé</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-star text-gold text-sm"></i> Optimisation SEO & Vitesse poussée</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-star text-gold text-sm"></i> Rapport de statistiques visiteurs</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-star text-gold text-sm"></i> Support technique VIP & prioritaire</li>
+                    </ul>
+                </div>
+
+                <a href="https://wa.me/2290168926564?text=Bonjour,%20je%20souhaite%20commander%20le%20Pack%20Premium%20(450.000%20FCFA)" 
+                   class="w-full py-3 px-4 rounded-lg gold-border text-center text-xs uppercase tracking-wider font-bold text-gold hover:bg-gold hover:text-black transition">
+                    Commander Ce Pack
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION NOS RÉALISATIONS (REPRODUCTIONS FIDÈLES) -->
+    <section id="realisations" class="py-20 px-4 bg-darkCard/30 border-t border-gold/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-gold text-xs uppercase tracking-widest font-semibold block mb-2">Exemples Concrets</span>
+                <h2 class="font-cinzel text-2xl sm:text-4xl font-extrabold gold-gradient-text uppercase">Nos Réalisations Recentes</h2>
+                <div class="w-16 h-0.5 bg-gold mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                
+                <!-- RÉALISATION 1 : LE BAOBAB ROYAL -->
+                <div class="custom-card rounded-2xl gold-border overflow-hidden p-6">
+                    <div class="mb-6 border-b border-gold/20 pb-4 flex justify-between items-end">
+                        <div>
+                            <span class="text-[10px] text-gold uppercase tracking-widest">Restaurant Gastronomique</span>
+                            <h3 class="font-cinzel text-2xl font-bold text-white">LE BAOBAB ROYAL</h3>
+                        </div>
+                        <span class="text-xs px-3 py-1 rounded-full bg-gold/10 text-gold border border-gold/30">Design Noir & Or</span>
+                    </div>
+
+                    <!-- MOCKUP MOBILE REPRODUIT EN CSS -->
+                    <div class="max-w-xs mx-auto border-4 border-gold/40 rounded-3xl overflow-hidden shadow-2xl bg-[#0a0804] text-center p-4 font-cinzel relative my-4">
+                        <div class="text-[9px] tracking-widest text-gold/80 mb-2">LE BAOBAB ROYAL</div>
+                        <div class="flex justify-center gap-4 text-[8px] text-gold/70 border-b border-gold/20 pb-2 mb-6">
+                            <span>HISTOIRE</span>
+                            <span>CARTE</span>
+                            <span>GALERIE</span>
+                            <span>AVIS</span>
+                        </div>
+
+                        <div class="text-[8px] tracking-[0.2em] text-gold/90 mb-1 uppercase">COTONOU · BÉNIN</div>
+                        <div class="text-xl font-extrabold text-gold mb-2">Le Baobab Royal</div>
+                        <p class="font-sans text-[9px] italic text-gray-300 mb-6 px-2">
+                            Une table d'exception où la cuisine africaine rencontre l'élégance.
+                        </p>
+
+                        <!-- Bouton WhatsApp Doré -->
+                        <div class="bg-[#D4AF37] text-black text-[9px] font-extrabold py-2.5 px-3 rounded uppercase tracking-wider mb-8 shadow-md">
+                            RÉSERVER SUR WHATSAPP
+                        </div>
+
+                        <!-- Graphique/Illustration Table Dressed reproduit -->
+                        <div class="border border-gold/30 rounded-t-xl p-3 bg-gradient-to-t from-black to-gold/10 pt-4">
+                            <div class="flex justify-center items-end gap-2 my-2">
+                                <!-- Assiette 1 -->
+                                <div class="w-8 h-4 rounded-full bg-amber-700 border border-gold flex items-center justify-center">
+                                    <div class="w-2 h-1 bg-yellow-400 rounded-full"></div>
+                                </div>
+                                <!-- Assiette Principale Candle -->
+                                <div class="relative flex flex-col items-center">
+                                    <div class="flex gap-4 mb-1">
+                                        <div class="w-1 h-3 bg-amber-200 rounded-full animate-pulse"></div>
+                                        <div class="w-1 h-3 bg-amber-200 rounded-full animate-pulse"></div>
+                                    </div>
+                                    <div class="w-14 h-6 rounded-full bg-red-900 border border-gold flex items-center justify-center">
+                                        <div class="w-4 h-2 bg-amber-800 rounded-full"></div>
+                                    </div>
+                                </div>
+                                <!-- Assiette 3 -->
+                                <div class="w-8 h-4 rounded-full bg-amber-900 border border-gold flex items-center justify-center">
+                                    <div class="w-2 h-1 bg-red-500 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-[#D4AF37] text-black text-[9px] font-bold py-2 uppercase tracking-wider mt-0 rounded-b">
+                            RÉSERVER
+                        </div>
+                    </div>
+
+                    <ul class="text-xs text-gray-300 space-y-2 mt-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Ambiance de luxe feutrée sur-mesure</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Carte gastronomique haut de gamme</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Réservation simplifiée via WhatsApp</li>
+                    </ul>
+                </div>
+
+                <!-- RÉALISATION 2 : SAVEURS D'AFRIQUE -->
+                <div class="custom-card rounded-2xl gold-border overflow-hidden p-6">
+                    <div class="mb-6 border-b border-gold/20 pb-4 flex justify-between items-end">
+                        <div>
+                            <span class="text-[10px] text-gold uppercase tracking-widest">Restaurant Moderne</span>
+                            <h3 class="font-cinzel text-2xl font-bold text-white">SAVEURS D'AFRIQUE</h3>
+                        </div>
+                        <span class="text-xs px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">WhatsApp Direct</span>
+                    </div>
+
+                    <!-- MOCKUP MOBILE REPRODUIT EN CSS -->
+                    <div class="max-w-xs mx-auto border-4 border-gray-800 rounded-3xl overflow-hidden shadow-2xl bg-[#0c0c0c] text-center p-4 font-sans relative my-4">
+                        <div class="text-[10px] text-left font-bold text-amber-500 mb-6">Saveurs d'Afrique</div>
+
+                        <!-- Logo Rond Plats Africain -->
+                        <div class="w-36 h-36 mx-auto rounded-full border-4 border-amber-500 flex items-center justify-center bg-stone-100 my-4 shadow-lg p-2">
+                            <div class="relative w-full h-full rounded-full flex items-center justify-center overflow-hidden">
+                                <div class="w-20 h-16 bg-red-600 rounded-2xl transform -rotate-12"></div>
+                                <div class="w-12 h-8 bg-amber-600 rounded-full absolute top-2 right-2"></div>
+                                <div class="w-10 h-6 bg-yellow-500 rounded-full absolute bottom-4 right-4"></div>
+                                <div class="w-4 h-4 bg-emerald-600 rounded-full absolute bottom-3 left-6"></div>
+                            </div>
+                        </div>
+
+                        <div class="text-xl font-bold text-amber-400 mb-1">Saveurs d'Afrique</div>
+                        <p class="text-[10px] italic text-gray-300 mb-6">
+                            Les vraies saveurs africaines à Cotonou
+                        </p>
+
+                        <!-- Bouton WhatsApp Vert -->
+                        <div class="bg-emerald-500 text-black font-bold text-xs py-3 px-4 rounded-full mb-8 shadow-md flex items-center justify-center gap-2">
+                            <span>Réserver sur WhatsApp</span>
+                        </div>
+
+                        <!-- Widget Flottant -->
+                        <div class="flex justify-end">
+                            <div class="bg-emerald-400 text-black text-[9px] font-bold px-3 py-1.5 rounded-full flex items-center gap-1 shadow-lg">
+                                <i class="fa-solid fa-comment"></i>
+                                <span>Réserver</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="text-xs text-gray-300 space-y-2 mt-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Menu digital attractif et coloré</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Bouton d'action WhatsApp très visible</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Mise en valeur de la cuisine locale</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION POURQUOI NOUS CHOISIR & NOTRE MÉTHODE -->
+    <section id="methode" class="py-20 px-4 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            
+            <!-- POURQUOI NOUS CHOISIR -->
+            <div>
+                <span class="text-gold text-xs uppercase tracking-widest font-semibold block mb-2">Nos Atouts Majeurs</span>
+                <h2 class="font-cinzel text-2xl sm:text-3xl font-extrabold text-white uppercase mb-6">Pourquoi Nous Choisir ?</h2>
+                <div class="w-12 h-0.5 bg-gold mb-8"></div>
+
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4 p-4 rounded-xl gold-border bg-darkCard/40">
+                        <div class="text-gold text-xl mt-1"><i class="fa-solid fa-bolt"></i></div>
+                        <div>
+                            <h4 class="text-sm font-bold text-gold uppercase">Création Rapide Grâce À L'IA</h4>
+                            <p class="text-xs text-gray-300">Des délais de livraison inégalés grâce à nos workflows optimisés.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-4 rounded-xl gold-border bg-darkCard/40">
+                        <div class="text-gold text-xl mt-1"><i class="fa-solid fa-palette"></i></div>
+                        <div>
+                            <h4 class="text-sm font-bold text-gold uppercase">Design Professionnel & Moderne</h4>
+                            <p class="text-xs text-gray-300">Une esthétique raffinée pour élever l'image de votre marque.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-4 rounded-xl gold-border bg-darkCard/40">
+                        <div class="text-gold text-xl mt-1"><i class="fa-solid fa-handshake"></i></div>
+                        <div>
+                            <h4 class="text-sm font-bold text-gold uppercase">Accompagnement Personnalisé</h4>
+                            <p class="text-xs text-gray-300">Un interlocuteur unique à votre écoute au Bénin.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-4 rounded-xl gold-border bg-darkCard/40">
+                        <div class="text-gold text-xl mt-1"><i class="fa-solid fa-tag"></i></div>
+                        <div>
+                            <h4 class="text-sm font-bold text-gold uppercase">Prix Adaptés Aux Entreprises Locales</h4>
+                            <p class="text-xs text-gray-300">Des tarifs accessibles sans compromis sur la qualité supérieure.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-4 rounded-xl gold-border bg-darkCard/40">
+                        <div class="text-gold text-xl mt-1"><i class="fa-solid fa-headset"></i></div>
+                        <div>
+                            <h4 class="text-sm font-bold text-gold uppercase">Assistance Après Livraison</h4>
+                            <p class="text-xs text-gray-300">Un suivi et du support continu pour faire évoluer votre site.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NOTRE MÉTHODE EN 5 ÉTAPES -->
+            <div>
+                <span class="text-gold text-xs uppercase tracking-widest font-semibold block mb-2">Processus Clair</span>
+                <h2 class="font-cinzel text-2xl sm:text-3xl font-extrabold text-white uppercase mb-6">Notre Méthode</h2>
+                <div class="w-12 h-0.5 bg-gold mb-8"></div>
+
+                <div class="space-y-6 relative border-l border-gold/30 ml-4 pl-6">
+                    <!-- Étape 1 -->
+                    <div class="relative">
+                        <div class="absolute -left-[31px] top-0 w-6 h-6 rounded-full bg-gold text-black text-xs font-bold flex items-center justify-center">1</div>
+                        <h4 class="font-cinzel text-sm font-bold text-gold uppercase">Analyse</h4>
+                        <p class="text-xs text-gray-300 mt-1">Étude approfondie de votre activité, vos objectifs et vos besoins spécifiques.</p>
+                    </div>
+
+                    <!-- Étape 2 -->
+                    <div class="relative">
+                        <div class="absolute -left-[31px] top-0 w-6 h-6 rounded-full bg-gold text-black text-xs font-bold flex items-center justify-center">2</div>
+                        <h4 class="font-cinzel text-sm font-bold text-gold uppercase">Création</h4>
+                        <p class="text-xs text-gray-300 mt-1">Conception sur-mesure de votre site web avec les meilleures technologies.</p>
+                    </div>
+
+                    <!-- Étape 3 -->
+                    <div class="relative">
+                        <div class="absolute -left-[31px] top-0 w-6 h-6 rounded-full bg-gold text-black text-xs font-bold flex items-center justify-center">3</div>
+                        <h4 class="font-cinzel text-sm font-bold text-gold uppercase">Validation</h4>
+                        <p class="text-xs text-gray-300 mt-1">Présentation complète de la maquette et ajustements selon vos retours.</p>
+                    </div>
+
+                    <!-- Étape 4 -->
+                    <div class="relative">
+                        <div class="absolute -left-[31px] top-0 w-6 h-6 rounded-full bg-gold text-black text-xs font-bold flex items-center justify-center">4</div>
+                        <h4 class="font-cinzel text-sm font-bold text-gold uppercase">Mise En Ligne</h4>
+                        <p class="text-xs text-gray-300 mt-1">Publication officielle, configuration du domaine et référencement initial.</p>
+                    </div>
+
+                    <!-- Étape 5 -->
+                    <div class="relative">
+                        <div class="absolute -left-[31px] top-0 w-6 h-6 rounded-full bg-gold text-black text-xs font-bold flex items-center justify-center">5</div>
+                        <h4 class="font-cinzel text-sm font-bold text-gold uppercase">Accompagnement</h4>
+                        <p class="text-xs text-gray-300 mt-1">Support technique continu et conseils pour maximiser vos résultats.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION CITATION -->
+    <section class="py-16 px-4 border-y border-gold/20 bg-gradient-to-r from-black via-gold/10 to-black text-center">
+        <div class="max-w-4xl mx-auto">
+            <i class="fa-solid fa-quote-left text-gold/40 text-3xl mb-4"></i>
+            <h3 class="font-cinzel text-xl sm:text-2xl font-bold text-gold italic leading-relaxed">
+                « Votre activité mérite une présence en ligne à la hauteur de votre ambition. »
+            </h3>
+            <p class="text-xs text-gray-400 mt-4 uppercase tracking-widest">— ALL FOR YOU Service IA</p>
+        </div>
+    </section>
+
+    <!-- SECTION CONTACT -->
+    <footer id="contact" class="py-20 px-4 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <!-- INFOS DE CONTACT -->
+            <div>
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-full border border-gold flex items-center justify-center bg-black">
+                        <span class="font-cinzel text-gold font-bold">AFY</span>
+                    </div>
+                    <div>
+                        <h3 class="font-cinzel text-xl font-bold text-gold uppercase">ALL FOR YOU Service IA</h3>
+                        <p class="text-xs text-gray-400">Transformez votre vision en réussite digitale</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6 mt-8">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <span class="text-[10px] text-gray-400 uppercase block">Téléphone / WhatsApp</span>
+                            <span class="text-sm font-bold text-white">+229 01 68 92 65 64 / 01 62 23 24 87</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <span class="text-[10px] text-gray-400 uppercase block">Adresse Email</span>
+                            <span class="text-sm font-bold text-white">ikejikadja@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <span class="text-[10px] text-gray-400 uppercase block">Localisation Siège</span>
+                            <span class="text-sm font-bold text-white">Godomey - Cotonou - Bénin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORMULAIRE RAPIDE -->
+            <div class="custom-card p-8 rounded-2xl gold-border">
+                <h3 class="font-cinzel text-xl font-bold text-gold uppercase mb-6">Demander Un Devis Gratuit</h3>
+                
+                <form id="contactForm" class="space-y-4">
+                    <div>
+                        <label class="text-xs text-gray-300 block mb-1">Votre Nom complet</label>
+                        <input type="text" id="name" required placeholder="Ex: Jean Dupont" 
+                               class="w-full bg-black/60 border border-gold/30 rounded-lg px-4 py-3 text-xs text-white focus:outline-none focus:border-gold">
+                    </div>
+
+                    <div>
+                        <label class="text-xs text-gray-300 block mb-1">Votre Numéro WhatsApp</label>
+                        <input type="tel" id="phone" required placeholder="Ex: +229 97 00 00 00" 
+                               class="w-full bg-black/60 border border-gold/30 rounded-lg px-4 py-3 text-xs text-white focus:outline-none focus:border-gold">
+                    </div>
+
+                    <div>
+                        <label class="text-xs text-gray-300 block mb-1">Pack Souhaité</label>
+                        <select id="pack" class="w-full bg-black/60 border border-gold/30 rounded-lg px-4 py-3 text-xs text-white focus:outline-none focus:border-gold">
+                            <option value="Pack Starter (150.000 FCFA)">Pack Starter - 150 000 FCFA</option>
+                            <option value="Pack Business (250.000 FCFA)" selected>Pack Business - 250 000 FCFA</option>
+                            <option value="Pack Premium (450.000 FCFA)">Pack Premium - 450 000 FCFA</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="text-xs text-gray-300 block mb-1">Détails de votre projet</label>
+                        <textarea id="message" rows="3" placeholder="Décrivez brièvement votre activité et vos besoins..." 
+                                  class="w-full bg-black/60 border border-gold/30 rounded-lg px-4 py-3 text-xs text-white focus:outline-none focus:border-gold"></textarea>
+                    </div>
+
+                    <button type="submit" class="gold-button w-full py-3.5 rounded-lg text-xs uppercase tracking-wider font-extrabold flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>Envoyer Directement Par WhatsApp</span>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="mt-16 pt-8 border-t border-gold/15 text-center text-xs text-gray-500">
+            <p>© 2026 ALL FOR YOU Service IA. Tous droits réservés. Godomey - Cotonou - Bénin.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT FORMULAIRE WHATSAPP -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const pack = document.getElementById('pack').value;
+            const message = document.getElementById('message').value;
+
+            const text = `Bonjour ALL FOR YOU Service IA !%0A%0A*Nouvelle demande de devis :*%0A- *Nom :* ${encodeURIComponent(name)}%0A- *Téléphone :* ${encodeURIComponent(phone)}%0A- *Pack sélectionné :* ${encodeURIComponent(pack)}%0A- *Message :* ${encodeURIComponent(message)}`;
+            
+            window.open(`https://wa.me/2290168926564?text=${text}`, '_blank');
+        });
+    </script>
+</body>
+</html>
